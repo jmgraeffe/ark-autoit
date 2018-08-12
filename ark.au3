@@ -1,8 +1,11 @@
-;; ARK AutoIt Script
-;; (c) 2018 by Jonniboy (mail@jonni.it)
-;; idea by raneo/Chiggn
+;;; >> ARK AutoIt Script <<
+;;; (C) 2018 by Jonniboy (mail [ät] jonni [pünktchen] it)
+;;; Idea by: raneo/Chiggn
+;;; License: MIT License, included in repository (https://github.com/j0nnib0y/ark-autoit)
 
-; config
+;; config
+
+; hotkeys
 Global $vHotkeyStopScript		= "F1"
 Global $vHotkeyToggleGui		= "F2"
 Global $vHotkeyToggleW 			= "F3"
@@ -10,6 +13,7 @@ Global $vHotkeyToggleAutoClick 	= "F4"
 Global $vHotkeyToggleAutoE 		= "F5"
 Global $vHotkeyToggleAutoU 		= "F6"
 
+; gui settings
 Global $vShowGuiOnDefault		= True
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; do not edit furthermore ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -21,12 +25,12 @@ Global $vShowGuiOnDefault		= True
 
 ;; gui definitions
 
-Global $hGui = GUICreate("ARK AutoIt Script", 200, 200)
+Global $hGui = GUICreate("ARK AutoIt Script", 210, 200)
 
 Global $vGuiMainLabel = GUICtrlCreateLabel("ARK AutoIt Script", 5, 5, 100, 170) ; disables the ability to click on the checkboxes
 GUICtrlSetFont($vGuiMainLabel, 9, $FW_BOLD)
 
-Global $vGuiCopyrightLabel = GUICtrlCreateLabel("(C) by Jonniboy (mail@jonni.it)", 5, 20, 200, 50)
+Global $vGuiCopyrightLabel = GUICtrlCreateLabel("by Jonniboy (mail@jonni.it), idea by Chiggn", 5, 20, 200, 50)
 
 Global $vMarginTop = 40;
 GUICtrlCreateLabel("Hotkeys:", 105, $vMarginTop, 50, 50)
@@ -62,8 +66,8 @@ Global $vGuiLabel_autoU = GUICtrlCreateLabel($vHotkeyToggleAutoU, 105, $vMarginT
 GUICtrlSetColor($vGuiLabel_autoU, $COLOR_RED)
 
 ; buttons
-Global $vGuiButton_Stop = GUICtrlCreateButton("Stop", 30, $vMarginTop + 135, 85, 25)
-Global $vGuiButton_Hide = GUICtrlCreateButton("Hide", 115, $vMarginTop + 135, 85, 25)
+Global $vGuiButton_Stop = GUICtrlCreateButton("Stop", 40, $vMarginTop + 135, 85, 25)
+Global $vGuiButton_Hide = GUICtrlCreateButton("Hide", 125, $vMarginTop + 135, 85, 25)
 
 ;; global variables
 
